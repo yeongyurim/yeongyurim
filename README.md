@@ -1,6 +1,6 @@
 ## Gyurim Yeon · 연규림
 
-Student developer. Currently on an overseas internship program in **Singapore**, building a service for the students who come next.
+Student developer. Currently studying in Kyonggi university.
 
 I like problems where the hard part is deciding what's true — reconciling two data sources, agreeing on a contract before anyone writes code, making a rule impossible to break rather than asking people to remember it.
 
