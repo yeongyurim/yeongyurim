@@ -65,7 +65,7 @@ A RESTful service written without a framework, to understand the layers instead 
 | 2022.02 | 안산대학교 졸업 |
 | 2025.03 | 경기대학교 편입 |
 | 2025.04 – 06 | KT 인턴십 수료 |
-| 2026 | 싱가포르 해외 연수 · BudgEats SG 개발 |
+| 2026.08 | 싱가포르 해외 연수 · BudgEats SG 개발 |
 | 2027.02 | 경기대학교 졸업 예정 |
 
 ---
