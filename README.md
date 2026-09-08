@@ -1,73 +1,57 @@
-## Gyurim Yeon · 연규림
+## 연규림 (Gyurim Yeon)
 
-Student developer. Currently studying in Kyonggi university.
-
-I like problems where the hard part is deciding what's true — reconciling two data sources, agreeing on a contract before anyone writes code, making a rule impossible to break rather than asking people to remember it.
+컴퓨터 비전과 시스템 운영을 함께 다루는 개발자입니다.
 
 ---
 
-### 🍜 Building now — BudgEats SG
+### 대표 프로젝트
 
-> A restaurant map that shows what students **actually pay** in Singapore.
+| 프로젝트 | 설명 | 기술 스택 | 링크 |
+|---|---|---|---|
+| **팔기전에** | 필요한 현금 금액을 입력하면 해외주식 양도소득세를 가장 적게 내는 매도 조합을 계산하는 웹서비스 | Next.js, TypeScript, Tailwind, Vitest, Vercel | [서비스](https://sell-before-tax-sheer-student.vercel.app) · [코드](https://github.com/yeongyurim/sell-before-tax) |
+| **눈길** | 신호등·횡단보도를 탐지해 시각장애인의 보행을 안내하는 온디바이스 내비게이션 | YOLOv8n, React Native | [코드](https://github.com/Eye-Path/react-native-eyepath) |
+| **거북목 탐지 모니터링** | 개인별 정상 자세를 캘리브레이션해 기준선을 잡고, 거북목 자세를 실시간으로 알리는 시스템 | MediaPipe, MiDaS | 비공개 |
 
-A S$7 dish costs S$8.39 once service charge and GST land on the bill. Existing maps rank restaurants by rating; we rank them by what people really spent — collected from the students who paid.
+**팔기전에** — 기본공제 250만원 때문에 세금 함수가 구간 선형이라 단일 기준 그리디로는 최적해를 놓칩니다. 이익 종목과 손실 종목을 함께 조합해 실현손익을 공제 한도 근처에 착지시키는 문제로 풀었습니다. 예시 시나리오에서 연간 실현손익 2,499,798원 — 250만원 한도를 202원 남기고 사용합니다. 모든 계산은 브라우저에서만 실행되며 서버로 보내지 않습니다. 2026 금융 AI Challenge(금융보안원 주최) 개인 출품작입니다.
 
-**My part** — frontend, plus the CI/CD and security pipeline:
+**눈길** — 갤럭시 S25급 기기에서의 온디바이스 추론을 목표로 YOLOv8n을 적용했습니다. 2025 산학협력 캡스톤 디자인 경진대회 기초 캡스톤 부문 출품작입니다.
 
-- **Map & pins** — price tiers rendered from a dual data source: measured student spend when we have enough reviews, Google's price level as fallback, and the client is told which one it got
-- **Cost control** — debounced map queries with in-flight cancellation, so one drag bills one Places call instead of dozens
-- **Security in the pipeline, not the docs** — secret scanning across the full git history, branch protection with required status checks, and lint rules that fail the build on `localStorage` token storage
-- **Contract-first parallel work** — froze the API response shapes so four people could build at once; swapping mocks for the real API touched only the network layer
-
-`React 19` · `TypeScript` · `Google Maps JavaScript API` · `GitHub Actions`
-Backend by teammates in `Java 21` + `Spring Boot`
-
-→ **[Ctrl-Alt-Defend-KR/budgeats-sg](https://github.com/Ctrl-Alt-Defend-KR/budgeats-sg)**
+**거북목 탐지 모니터링** — 자세는 사람마다 기준이 달라 절대 각도로는 판별이 어렵습니다. 사용자별 정상 자세를 먼저 캘리브레이션해 기준선을 세우고, 이탈 시 푸시 알림·자세 유지 시간 기록·일간 대시보드를 제공합니다. 시스템 사용 시 촬영만 했을 때보다 거북목 자세 유지 시간 비율이 약 30% 줄었습니다.
 
 ---
 
-### Selected work
+### 기술 스택
 
-**[finbert-xgboost-predictor](https://github.com/yeongyurim/finbert-xgboost-predictor)** · `Python`
-Stock prediction pipeline pairing Korean financial sentiment analysis (KR-FinBERT) with XGBoost — because price history alone misses what the market just read.
-
-**DrillLog** · `React Native` `Expo`
-A workout logger built around one constraint: recording a set has to be fast enough to do *between* sets.
-
-**[Node.js-MySQL-RESTful](https://github.com/yeongyurim/Node.js-MySQL-RESTful)** · `Node.js` `MySQL`
-A RESTful service written without a framework, to understand the layers instead of inheriting them.
-
----
-
-### Tech
-
-![TypeScript](https://img.shields.io/badge/TypeScript-16211C?style=flat-square&logo=typescript&logoColor=white)
-![React](https://img.shields.io/badge/React-16211C?style=flat-square&logo=react&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-16211C?style=flat-square&logo=javascript&logoColor=white)
-![Python](https://img.shields.io/badge/Python-16211C?style=flat-square&logo=python&logoColor=white)
-![Java](https://img.shields.io/badge/Java-16211C?style=flat-square&logo=openjdk&logoColor=white)
-![C](https://img.shields.io/badge/C-16211C?style=flat-square&logo=c&logoColor=white)
-
-![Node.js](https://img.shields.io/badge/Node.js-3D4A44?style=flat-square&logo=nodedotjs&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-3D4A44?style=flat-square&logo=vite&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3D4A44?style=flat-square&logo=springboot&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-3D4A44?style=flat-square&logo=mysql&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-3D4A44?style=flat-square&logo=githubactions&logoColor=white)
-![Git](https://img.shields.io/badge/Git-3D4A44?style=flat-square&logo=git&logoColor=white)
-
----
-
-### 걸어온 길
-
-| | |
+| 분류 | |
 |---|---|
-| 2018.03 | 안산대학교 입학 |
-| 2022.02 | 안산대학교 졸업 |
-| 2025.03 | 경기대학교 편입 |
-| 2025.04 – 06 | KT 인턴십 수료 |
-| 2026.08 | 싱가포르 해외 연수 · BudgEats SG 개발 |
-| 2027.02 | 경기대학교 졸업 예정 |
+| 언어 | TypeScript |
+| 웹 | Next.js, Tailwind CSS |
+| 모바일 | React Native |
+| 컴퓨터 비전 | YOLOv8n, MediaPipe, MiDaS |
+| 테스트 | Vitest |
+| 인프라·운영 | Vercel, Solace (EAI 미들웨어) |
 
 ---
 
-<sub>📍 Seoul / Singapore · <a href="https://github.com/yeongyurim?tab=repositories">repositories</a></sub>
+### 학력
+
+| 기간 | |
+|---|---|
+| 2018.03 – 2022.02 | 안산대학교 IT응용보안과 졸업 |
+| 2025.03 – 2027.02 (예정) | 경기대학교 AI컴퓨터공학부 컴퓨터공학전공 (3학년 편입) |
+
+### 경력
+
+| 기간 | |
+|---|---|
+| 2022.03 – 2022.08 | 이디코어 개발팀 사원 — Solace 미들웨어로 공장 간 생산 데이터를 연동하는 EAI 시스템 운영 |
+| 2023.06 – 재직 중 | 한국마사회 발매지원센터 |
+| 2025.04 – 2025.06 | KT 인턴십 수료 <sup>*</sup> |
+
+<sub>* 본인 재확인 예정 항목</sub>
+
+---
+
+### 자격
+
+정보처리기사 · TOEIC 925 · OPIc IH
